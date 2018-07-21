@@ -108,11 +108,11 @@
             // labelWindowName
             // 
             this.labelWindowName.AutoSize = true;
-            this.labelWindowName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWindowName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWindowName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.labelWindowName.Location = new System.Drawing.Point(58, 7);
+            this.labelWindowName.Location = new System.Drawing.Point(56, 3);
             this.labelWindowName.Name = "labelWindowName";
-            this.labelWindowName.Size = new System.Drawing.Size(77, 17);
+            this.labelWindowName.Size = new System.Drawing.Size(106, 22);
             this.labelWindowName.TabIndex = 0;
             this.labelWindowName.Text = "Calculator";
             // 
@@ -121,7 +121,7 @@
             this.mathBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(37)))), ((int)(((byte)(66)))));
             this.mathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mathBox.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mathBox.ForeColor = System.Drawing.Color.White;
+            this.mathBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
             this.mathBox.Location = new System.Drawing.Point(40, 50);
             this.mathBox.Name = "mathBox";
             this.mathBox.ReadOnly = true;
@@ -428,8 +428,10 @@
             this.Controls.Add(this.mathBox);
             this.Controls.Add(this.windowControlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.windowControlPanel.ResumeLayout(false);
             this.windowControlPanel.PerformLayout();
             this.ResumeLayout(false);

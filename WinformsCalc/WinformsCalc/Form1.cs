@@ -156,6 +156,81 @@ namespace WinformsCalc
             }
         }
 
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '0')
+                newCalculator.InsertDigit(Digit.ZERO);
+            else if (e.KeyChar == '1')
+                newCalculator.InsertDigit(Digit.ONE);
+            else if (e.KeyChar == '2')
+                newCalculator.InsertDigit(Digit.TWO);
+            else if (e.KeyChar == '3')
+                newCalculator.InsertDigit(Digit.THREE);
+            else if (e.KeyChar == '4')
+                newCalculator.InsertDigit(Digit.FOUR);
+            else if (e.KeyChar == '5')
+                newCalculator.InsertDigit(Digit.FIVE);
+            else if (e.KeyChar == '6')
+                newCalculator.InsertDigit(Digit.SIX);
+            else if (e.KeyChar == '7')
+                newCalculator.InsertDigit(Digit.SEVEN);
+            else if (e.KeyChar == '8')
+                newCalculator.InsertDigit(Digit.EIGHT);
+            else if (e.KeyChar == '9')
+                newCalculator.InsertDigit(Digit.NINE);
+            else if (e.KeyChar == '+')
+                newCalculator.SetOperation(Sign.ADD);
+            else if (e.KeyChar == '-')
+                newCalculator.SetOperation(Sign.SUBTRACT);
+            else if (e.KeyChar == '*')
+                newCalculator.SetOperation(Sign.MULTIPLY);
+            else if (e.KeyChar == '/')
+                newCalculator.SetOperation(Sign.DIVIDE);
+            else if (e.KeyChar == ',')
+                newCalculator.InsertComma();
+            else if (e.KeyChar == '=')
+                newCalculator.CalculateResult();
+            else
+                return;
+        }
 
+        /*
+private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+{
+   if (e.KeyChar == '0')
+       newCalculator.InsertDigit(Digit.ZERO);
+   else if (e.KeyChar == '1')
+       newCalculator.InsertDigit(Digit.ONE);
+   else if (e.KeyChar == '2')
+       newCalculator.InsertDigit(Digit.TWO);
+   else if (e.KeyChar == '3')
+       newCalculator.InsertDigit(Digit.THREE);
+   else if (e.KeyChar == '4')
+       newCalculator.InsertDigit(Digit.FOUR);
+   else if (e.KeyChar == '5')
+       newCalculator.InsertDigit(Digit.FIVE);
+   else if (e.KeyChar == '6')
+       newCalculator.InsertDigit(Digit.SIX);
+   else if (e.KeyChar == '7')
+       newCalculator.InsertDigit(Digit.SEVEN);
+   else if (e.KeyChar == '8')
+       newCalculator.InsertDigit(Digit.EIGHT);
+   else if (e.KeyChar == '9')
+       newCalculator.InsertDigit(Digit.NINE);
+   else if (e.KeyChar == '+')
+       newCalculator.SetOperation(Sign.ADD);
+   else if (e.KeyChar == '-')
+       newCalculator.SetOperation(Sign.SUBTRACT);
+   else if (e.KeyChar == '*')
+       newCalculator.SetOperation(Sign.MULTIPLY);
+   else if (e.KeyChar == '/')
+       newCalculator.SetOperation(Sign.DIVIDE);
+   else if (e.KeyChar == ',')
+       newCalculator.InsertComma();
+   else if (e.KeyChar == '=')
+       newCalculator.CalculateResult();
+   else
+       return;
+}*/
     }
 }
